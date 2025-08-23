@@ -28,11 +28,10 @@
 - dto는 record로 생성한다.
 - 메서드의 순서는 `public`을 위에 두되, `private`의 경우 사용하는 메서드 아래에 둔다.
 - 필드 변수는 `static final` → `final` → `instance variable` 순서로 정의한다.
-- 웬만한 상황에서의 static factory method는 지양한다.
 - 메서드 매개변수, 지역 변수에는 `final`을 사용한다.
     - 초기화되지 않은 상태로 변수를 선언하지 말자.
 
-# **엔티티**
+# 엔티티
 
 - `@Table`과 `@Column` 으로 테이블명, 컬럼명을 기본적을 명시하지 않되, 필요에 따라 논의 후 적용한다.
     - 예약어인 경우 복수형 또는 동의어를 찾아 작성한다 (예: `order` → `orders`)

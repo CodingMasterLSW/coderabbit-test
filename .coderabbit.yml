@@ -1,7 +1,7 @@
 language : "ko-KR"
 
 reviews :
-  profile : "assertive"
+  profile : "chill"
   # PR/MR 설명에 변경 사항에 대한 높은 수준의 요약을 생성합니다.
   # 기본값: true
   high_level_summary : true

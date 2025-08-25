@@ -1,34 +1,15 @@
 language : "ko-KR"
 
 reviews :
-  profile : "chill"
-  # PR/MR 설명에 변경 사항에 대한 높은 수준의 요약을 생성합니다.
-  # 기본값: true
+  profile : chill
   high_level_summary : true
 
   # 자동 리뷰 설정
   auto_review :
-    # 자동 코드 리뷰를 활성화합니다.
-    # 기본값: true
     enabled : true
 
-  path_instructions:
-    - path: "**/*.sql"
-      instructions: |
-        - The time-related type uses datetime instead of timestamp.
-        - When using boolean type, use bit.
-    - path: "**/src/main/java/**"
-      instructions: |
-        - Attach the final inside the parameter or local variable.
-        - Validate inputs using `@Valid` along with `@NotBlank` or `@NotNull`.
-        - Use positive names for validation and boolean-returning methods (e.g., `isValid`, `hasPermissions`).
-        - Use `request` or `response` instead of the general `dto` naming.
-        - Use a trailing comma when defining enum values.
-        - Use `@Getter`, `@NoArgsConstructor`, `@RequiredArgsConstructor`, and `@Builder` (for 4+ fields) instead of `@Data`.
-        - Place important annotations like `@Entity` or `@Table` above Lombok annotations.
-        - Create DTOs using `record` classes.
-        - Order methods with `public` methods first, and `private` methods directly below the `public` method that calls them.
-        - Do not declare uninitialized variables.
-        - Explicitly define `nullable = false` in the `@Column` annotation.
-        - Avoid using `@RequestMapping` at the class level in a `@RestController`.
-        - Apply `@Transactional(readOnly = true)` at the top of the service class.
+knowledge_base :
+  code_guidelines :
+    enabled : true
+    filePatterns :
+      - "docs/team_conventions.md"

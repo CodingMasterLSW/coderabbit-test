@@ -12,9 +12,15 @@ reviews :
     # 기본값: true
     enabled : true
 
-    # 드래프트 PR/MR을 리뷰합니다.
-    # 기본값: false
-    drafts : false
+  path_instructions:
+    - path: "**/*.sql"
+      instructions: |
+        - The time-related type uses datetime instead of timestamp.
+        - When using boolean type, use bit.
+    - path: "**/src/main/java/**"
+      instructions: |
+        Attach the final inside the parameter or local variable.
+
 # =============================================================================
 # KNOWLEDGE BASE
 # 지식 기반 설정입니다.
@@ -32,4 +38,5 @@ knowledge_base :
     # 여러 파일이 지원됩니다. 파일 이름은 대소문자를 구분합니다.
     # 일반적인 파일들(예: .github/copilot-instructions.md)은 기본적으로 포함됩니다 [8].
     filePatterns :
-      - "./docs/team_conventions.md"   # 예시: 팀의 코딩 컨벤션 문서
+      - "**/docs/team_conventions.md"   # 예시: 팀의 코딩 컨벤션 문서
+      - "docs/team_conventions.md"

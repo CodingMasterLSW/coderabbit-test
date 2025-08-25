@@ -1,15 +1,15 @@
-language : "ko-KR"
+language: "ko-KR"
 
-reviews :
-  profile : chill
-  high_level_summary : true
+reviews:
+  profile: chill
+  high_level_summary: true
 
-  # 자동 리뷰 설정
-  auto_review :
-    enabled : true
+  auto_review:
+    enabled: true
 
-knowledge_base :
-  code_guidelines :
-    enabled : true
-    filePatterns :
+knowledge_base:
+  code_guidelines:
+    enabled: true
+    filePatterns:
       - "docs/team_conventions.md"
+      - "**/team_conventions.md"

@@ -1,9 +1,6 @@
 public class Ticket {
-
     private static final int TICKET_PRICE = 1_000;
-
     private final int quantity;
-
     private Ticket(int quantity) {
         this.quantity = quantity;
     }
